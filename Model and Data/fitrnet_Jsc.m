@@ -7,9 +7,9 @@ rng(42);
 
 % Filenames
 lhs_filename = "LHS_parameters_m.txt";
-iv_filename = "iV_m.txt";
+jv_filename = "iV_m.txt";
 processed_lhs_filename = "lhs32DataFile.txt";
-processed_iv_filename = "iDataFile.txt";
+processed_jv_filename = "iDataFile.txt";
 
 %% Figure configurarions
 % Font
@@ -69,7 +69,7 @@ fprintf('\n');
 
 %% Data Processing and Extraction
 % process IV data to extract key points of interest
-[~, ~, ~, ~, FF_values] = process_iv_Jsc(lhs_filename, iv_filename, processed_lhs_filename, processed_iv_filename, filter);
+[~, ~, ~, ~, FF_values] = process_jv_Jsc(lhs_filename, jv_filename, processed_lhs_filename, processed_jv_filename, filter);
 
 % Define the file path
 file_path = fullfile(folder_name, sprintf('%s %d boxplot (Jsc).png', boxplot_name, length(FF_values)));
